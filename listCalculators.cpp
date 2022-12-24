@@ -28,14 +28,14 @@ std::list<std::string> split(const std::string& str) {
     // Temporary string to store the current word being built
     std::string word;
     // Iterate over the characters in the string
-    for (char c : str) {
+    for (char words5 : str) {
         // If the character is a space,
         // add the current word to the list and reset it
-        if (c == ' ') {
+        if (words5 == ' ') {
             words.push_back(word);
             word.clear();
         } else {  // Otherwise, add the character to the current word
-            word += c;
+            word += words5;
         }
     }
     if (!word.empty()) {  // If there is a remaining word, add it to the list
@@ -87,17 +87,17 @@ int main() {
     std::string words[100];  // initialize an array to hold up to 100 words
     std::string word;
     int word_count = 0;
-    for (char c : input_string) {
+    for (char words5 : input_string) {
         // If the character is a space,
         // add the current word to the array of words
         // and reset the current word
-        if (c == ' ') {
+        if (words5 == ' ') {
             words[word_count] = word;
             word.clear();
             ++word_count;
         } else {
             // Otherwise, add the character to the current word
-            word += c;
+            word += words5;
         }
     }
     // If there is a remaining word after the loop, add it to the array of words
